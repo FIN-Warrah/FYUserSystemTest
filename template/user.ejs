@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户界面</title>
+</head>
+<body>
+    <a href="/logout">退出登录</a><br/>
+    <br/>
+    <table border="1">
+        基本信息
+        <thead>
+            <th> 用户ID </th>
+            <th> 用户名 </th>
+            <th> 密码 </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= information.user_id %></td>
+                <td><%= information.username %></td>
+                <td><%= information.password %></td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+    <br/>
+    <br/>
+    <table border="1">
+            详细信息
+            <thead>
+                <th> 姓名 </th>
+                <th> 电话 </th>
+                <th> 邮箱 </th>
+                <th> QQ </th>
+                <th> 注册时间 </th>
+            </thead>
+            <tbody>
+                <th><%= further_information.name %></th>
+                <th><%= further_information.cell %></th>
+                <th><%= further_information.email %></th>
+                <th><%= further_information.qq %></th>
+                <th><%= further_information.reg_time %></th>
+            </tbody>
+        </table>
+        <br/>
+        <br/>
+        <a href="/mod?user_id=<%= information.user_id %>">修改</a>
+          
+</body>
+</html>

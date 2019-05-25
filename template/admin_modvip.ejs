@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改VIP信息</title>
+</head>
+<body>
+        <form action="/admin/modvip" method="POST">
+            <input type="hidden" name="id" value="<%= information.id %>">
+            card_id: <input type="text" name="card_id" value="<%= information.card_id %>"><br/>
+            name: <input type="text" name="name" value="<%= information.name %>"><br/>
+            gender: <input type="text" name="gender" value="<%= information.gender %>"><br/>
+            cell: <input type="text" name="cell" value="<%= information.cell %>"><br/>
+            qq: <input type="text" name="qq" value="<%= information.qq %>"><br/>
+            department: <input type="text" name="department" value="<%= information.department %>"><br/>
+            grade: <input type="text" name="grade" value="<%= information.grade %>"><br/>
+            <input type="submit" value="提交">
+            <a href="/admin/viewvip">返回</a>
+        </form>
+</body>
+</html>

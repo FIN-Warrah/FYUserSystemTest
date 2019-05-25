@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>查看VIP</title>
+</head>
+<body>
+    <a href="/admin/addvip">添加VIP</a>
+    <a href="/">返回</a>
+    <table border="1">
+        <thead>
+            <th>card_id</th>
+            <th> name </th>
+            <th> gender </th>
+            <th> cell </th>
+            <th> qq </th>
+            <th>department</th>
+            <th>grade</th>
+            <th>operation</th>
+        </thead>
+        <tbody>
+            <% for(var q=0;q<vipinf.length;q++){ %>
+            <tr>
+                <input type="hidden" name="id" value="<%= vipinf[q].id %>">
+                <td><%= vipinf[q].card_id %></td>
+                <td><%= vipinf[q].name %></td>
+                <td><%= vipinf[q].gender %></td>
+                <td><%= vipinf[q].cell %></td>
+                <td><%= vipinf[q].qq %></td>
+                <td><%= vipinf[q].department %></td>
+                <td><%= vipinf[q].grade %></td>
+                <td>
+                    <a href="/admin/modvip?id=<%= vipinf[q].id %>">修改</a>
+                    <a href="/admin/deletevip?id=<%= vipinf[q].id %>">删除</a>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    
+</body>
+</html>

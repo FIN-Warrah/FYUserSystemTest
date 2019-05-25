@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>这是管理员界面</title>
+</head>
+<body>
+    <a href="/logout">退出登录</a>
+    <a href="/admin/viewvip">查看VIP</a>
+    <table border="1">
+        <thead>
+            <th>id</th>
+            <th> user_id </th>
+            <th> username </th>
+            <th> locked </th>
+            <th> last_update </th>
+            <!--
+            <th> name </th>
+            <th> cell </th>
+            <th> email </th>
+            <th> qq </th>
+            <th> reg_time </th>-->
+            <th>operation</th>
+        </thead>
+        <tbody>
+            <% for(var k=0;k<inf.length;k++){ %>
+            <tr>
+                <td><%= inf[k].id %></td>
+                <td><%= inf[k].user_id %></td>
+                <td><%= inf[k].username %></td>
+                <td><%= inf[k].locked %></td>
+                <td><%= inf[k].last_update %></td>
+                <td>
+                    <a href="/admin/viewmore?user_id=<%= inf[k].user_id %>">查看详细</a>
+                    <a href="/admin/mod?user_id=<%= inf[k].user_id %>">修改</a>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
